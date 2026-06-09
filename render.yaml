@@ -6,6 +6,8 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
+    numPorts: 1
+    healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
