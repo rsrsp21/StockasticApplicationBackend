@@ -10,17 +10,11 @@ services:
     healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_DATASOURCE_URL
-        fromDatabase:
-          name: stockastic-db
-          property: connectionString
+        value: jdbc:postgresql://dpg-d8k072a8qa3s73bd588g-a.oregon-postgres.render.com:5432/stockastic_db?currentSchema=public
       - key: SPRING_DATASOURCE_USERNAME
-        fromDatabase:
-          name: stockastic-db
-          property: user
+        value: stockastic_db_user
       - key: SPRING_DATASOURCE_PASSWORD
-        fromDatabase:
-          name: stockastic-db
-          property: password
+        value: mqi4pNFlfgThTb5kutafU7NthPP8ZSLW
       - key: JWT_SECRET
         generateValue: true
       - key: SPRING_PROFILES_ACTIVE
@@ -31,9 +25,3 @@ services:
         value: none
       - key: EUREKA_CLIENT_ENABLED
         value: false
-
-databases:
-  - name: stockastic-db
-    databaseName: stockastic_db
-    user: stockastic_user
-    plan: free
