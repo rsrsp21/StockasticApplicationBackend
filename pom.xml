@@ -269,7 +269,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
-					<release>25</release>
+					<release>21</release>
 					<encoding>${project.build.sourceEncoding}</encoding>
 					<compilerArgs>
 						<arg>-parameters</arg>
