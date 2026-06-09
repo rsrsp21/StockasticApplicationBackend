@@ -7,6 +7,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.cors.CorsConfigurationSource;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,13 +25,13 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // Default development origins
-        List<String> defaultOrigins = Arrays.asList(
+        List<String> defaultOrigins = new ArrayList<>(Arrays.asList(
                 "http://localhost:*",
                 "https://localhost:*",
                 "http://127.0.0.1:*",
                 "https://127.0.0.1:*",
                 "https://*.inc1.devtunnels.ms"
-        );
+        ));
 
         // Add production origins from environment variable if provided
         if (corsAllowedOrigins != null && !corsAllowedOrigins.trim().isEmpty()) {
