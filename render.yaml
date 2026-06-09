@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: stockastic-backend
+    env: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: stockastic-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: stockastic-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: stockastic-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: SERVER_PORT
+        value: 8080
+      - key: SPRING_AI_CHAT_MODEL
+        value: none
+      - key: EUREKA_CLIENT_ENABLED
+        value: false
+
+databases:
+  - name: stockastic-db
+    databaseName: stockastic_db
+    user: stockastic_user
+    plan: free

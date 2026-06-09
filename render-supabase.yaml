@@ -1,0 +1,35 @@
+# Render deployment configuration using external Supabase PostgreSQL
+services:
+  - type: web
+    name: stockastic-backend
+    env: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      # Supabase Database Configuration
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://db.jzvbetthtltsqdxaptfz.supabase.co:5432/postgres?currentSchema=public
+      - key: SPRING_DATASOURCE_USERNAME
+        value: postgres
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: ${SUPABASE_DATABASE_PASSWORD}
+      # JWT Configuration
+      - key: JWT_SECRET
+        generateValue: true
+      # Spring Profile
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      # Server Configuration
+      - key: SERVER_PORT
+        value: 8080
+      # AI Configuration (disabled by default)
+      - key: SPRING_AI_CHAT_MODEL
+        value: none
+      # Eureka (disabled)
+      - key: EUREKA_CLIENT_ENABLED
+        value: false
+      # CORS Configuration (add your Vercel frontend URL)
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://your-frontend-domain.vercel.app

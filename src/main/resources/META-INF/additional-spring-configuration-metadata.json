@@ -1,0 +1,102 @@
+{"properties": [
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  },
+  {
+    "name": "jwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.expiration'"
+  },
+  {
+    "name": "file.upload-dir",
+    "type": "java.lang.String",
+    "description": "A description for 'file.upload-dir'"
+  },
+  {
+    "name": "file.max-size",
+    "type": "java.lang.String",
+    "description": "A description for 'file.max-size'"
+  },
+  {
+    "name": "file.upload-kyc",
+    "type": "java.lang.String",
+    "description": "A description for 'file.upload-kyc'"
+  },
+  {
+    "name": "file.upload-stocks",
+    "type": "java.lang.String",
+    "description": "A description for 'file.upload-stocks'"
+  },
+  {
+    "name": "yahoo.finance.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'yahoo.finance.api.url'"
+  },
+  {
+    "name": "yahoo.finance.api.timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'yahoo.finance.api.timeout'"
+  },
+  {
+    "name": "stockprice.scheduler.fetch-cron",
+    "type": "java.lang.String",
+    "description": "A description for 'stockprice.scheduler.fetch-cron'"
+  },
+  {
+    "name": "stockprice.cleanup.days-to-keep",
+    "type": "java.lang.String",
+    "description": "A description for 'stockprice.cleanup.days-to-keep'"
+  },
+  {
+    "name": "stockprice.scheduler.cleanup-cron",
+    "type": "java.lang.String",
+    "description": "A description for 'stockprice.scheduler.cleanup-cron'"
+  },
+  {
+    "name": "jwt.refresh.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.refresh.expiration'"
+  },
+  {
+    "name": "stockprice.live-update.interval-ms",
+    "type": "java.lang.String",
+    "description": "A description for 'stockprice.live-update.interval-ms'"
+  },
+  {
+    "name": "stockprice.initializer.parallelism",
+    "type": "java.lang.Integer",
+    "description": "Parallel worker count used by startup stock price initializer."
+  },
+  {
+    "name": "app.async.core-pool-size",
+    "type": "java.lang.Integer",
+    "description": "Core thread count for the default async executor."
+  },
+  {
+    "name": "app.async.max-pool-size",
+    "type": "java.lang.Integer",
+    "description": "Maximum thread count for the default async executor."
+  },
+  {
+    "name": "app.async.queue-capacity",
+    "type": "java.lang.Integer",
+    "description": "Queue capacity for the default async executor."
+  },
+  {
+    "name": "app.async.activity-log.core-pool-size",
+    "type": "java.lang.Integer",
+    "description": "Core thread count for activity-log async writes."
+  },
+  {
+    "name": "app.async.activity-log.max-pool-size",
+    "type": "java.lang.Integer",
+    "description": "Maximum thread count for activity-log async writes."
+  },
+  {
+    "name": "app.async.activity-log.queue-capacity",
+    "type": "java.lang.Integer",
+    "description": "Queue capacity for activity-log async writes."
+  }
+]}
